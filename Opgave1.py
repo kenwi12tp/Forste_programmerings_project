@@ -6,4 +6,8 @@ conn = sql.connect("Gamers.db")
 cur = conn.cursor()
 
 cur.execute("""CREATE TABLE Gamers(id INTEGER Primary KEY, username TEXT,First_login TEXT,Hours_played INTEGER,Last_seen_online TEXT,Main_hero TEXT)""")
-#conn.commit()
+conn.commit()
+conn.close()
+
+
+
