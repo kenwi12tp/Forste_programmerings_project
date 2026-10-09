@@ -5,3 +5,4 @@ cur = conn.cursor()
 
 cur.execute("DELETE FROM Gamers")
 conn.commit()
+conn.close()
