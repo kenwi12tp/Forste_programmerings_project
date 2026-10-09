@@ -9,9 +9,6 @@ from datetime import datetime, timedelta
 conn = sql.connect("Gamers.db")
 cur = conn.cursor()
 
-conn = sqlite3.connect("game.db")
-cur = conn.cursor()
-
 cur.execute("""
 CREATE TABLE IF NOT EXISTS Gamers (
     id INTEGER PRIMARY KEY,
