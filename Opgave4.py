@@ -8,4 +8,5 @@ cur = conn.cursor()
 cur.execute("select * from Gamers")
 data = cur.fetchall()
 for i in data:
-    print(i)
+    print(f"Player:{i[1]}, Joined the at:{i[2]}, Hours played:{i[3]}, Last seen:{i[4]}, Main hero:{i[5]}")
+conn.close()
