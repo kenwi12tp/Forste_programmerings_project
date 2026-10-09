@@ -12,3 +12,4 @@ print("Here is all our Champions")
 for row in data:
     print(f"player:{row[1]} has {row[3]} Hours played and is therefor a champion")
 conn.close()
+
