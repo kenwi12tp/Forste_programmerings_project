@@ -1,16 +1,9 @@
-# This is a sample Python script.
+#opgave 1 Et script til at definere databasens tabelstruktur – hvis I har f.eks. to tabeller så også med en
+#fremmednøgle. I skal bruge CREATE TABLE-kommandoen
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import sqlite3 as sql
+conn = sql.connect("Gamers.db")
+cur = conn.cursor()
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+cur.execute("""CREATE TABLE Gamers(id INTEGER Primary KEY, username TEXT,First_login TEXT,Hours_played INTEGER,Last_seen_online TEXT,Main_hero TEXT)""")
+#conn.commit()

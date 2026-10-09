@@ -1,0 +1,33 @@
+PB Cyper Sommer 2026, Obligatorisk Caseopgave i Programmering.
+Titel: Database og inputvalidering med Python.
+Projektets forløb: Casen udleveres torsdag 8. oktober, I skal arbejde i grupper - som udgangspunkt Jeres
+studiegrupper. Fremlæggelser: torsdag 22. oktober med en powerpoint (jeg er eneste publikum). I skal ikke
+arbejde ud over den normale undervisningstid i Programmering – men der er måske lidt hjemmearbejde. I
+har selvfølgelig helt fri i efterårsferien!
+Læringsmål: Simpel versionsstyring og samarbejde om en fælles kodebase. Simple SQL kommandoer og
+integration af SQLite i Python. Konsolinput og validering af brugerdata med Python.
+Opgaven:
+Gruppen vælger selv en case hvor man kan gemme data i en eller max. to tabeller.
+Det kan være oplysninger om: produkter, brugere, studenter, medarbejdere, dyr i en Zoo eller noget helt
+andet som gruppen altså selv vælger.
+
+I skal lave et projekt som består af en række python-scripts der hver især har et veldefineret formål:
+1) Et script til at definere databasens tabelstruktur – hvis I har f.eks. to tabeller så også med en
+fremmednøgle. I skal bruge CREATE TABLE-kommandoen
+2) Et script til ”bulk-insert” af 100, 500 eller måske endnu flere data. Her må/skal I bruge en LLM til at
+generere nogle kunstige data – bed LLM’en om at give Jer f.eks. 100 INSERT INTO-statements som
+passer til Jeres datamodel.
+3) Et script til at tømme tabellerne for data. Her bruges DELETE FROM kommandoen.
+4) Et script til at læse og vise al data i tabellerne. Her bruges SELECT statementet. Data skal udskrives
+pænt i konsollen.
+5) Et script til at filtrere data (lave en udvælgelse med SELECT). Det kunne f.eks. være alle students der
+bor i Esbjerg.
+6) Et script til at tilføje én ny ”record” i databasen, baseret på input fra brugeren. I skal igen bruge
+INSERT INTO-kommandoen.
+Det vil være super hvis der var validering af hvert enkelt felt således at
+man ikke kan komme til at indsætte en tekst under et felt som kun kan indeholde tal.
+I skal kode projektet og lægge det op på GitHub med løbende commits. Jeres kodebase skal være public og I
+skal maile et link til mig når projektet er færdigt. Jeg vil kigge på om koden er velstruktureret, om der er
+kommentarer og gode variabelnavne, og om alle gruppens medlemmer har lavet commits!
+Jeg forventer at alle gør en indsats og bidrager (opgaven er obligatorisk). Ved fremlæggelsen får I mundtlig
+feedback og alle får selvfølgelig godkendt deres arbejde hvis man har bidraget.
