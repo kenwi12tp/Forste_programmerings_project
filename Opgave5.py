@@ -5,6 +5,7 @@ import sqlite3 as sql
 conn = sql.connect("Gamers.db")
 cur = conn.cursor()
 
+#finder alt datasæt hvor hours played er mere end 3000 også printes hvem der fylder kriteriet efter
 cur.execute("SELECT * FROM Gamers WHERE Hours_played > 3000")
 data = cur.fetchall()
 

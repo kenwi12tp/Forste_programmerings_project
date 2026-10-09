@@ -9,17 +9,6 @@ from datetime import datetime, timedelta
 conn = sql.connect("Gamers.db")
 cur = conn.cursor()
 
-cur.execute("""
-CREATE TABLE IF NOT EXISTS Gamers (
-    id INTEGER PRIMARY KEY,
-    username TEXT,
-    First_login TEXT,
-    Hours_played INTEGER,
-    Last_seen_online TEXT,
-    Main_hero TEXT
-)
-""")
-
 heroes = [
     "Warrior", "Mage", "Assassin", "Archer",
     "Paladin", "Necromancer", "Druid", "Berserker"
@@ -27,6 +16,7 @@ heroes = [
 
 gamers = []
 
+#alt data der skal i datasættet bliver skabt i dette forlob da der skal bruges 500 datasæt
 for i in range(1, 501):
     username = f"Gamer{i:03d}"
 
@@ -51,6 +41,7 @@ for i in range(1, 501):
         main_hero
     ))
 
+#data indsættes i databasen
 cur.executemany("""
 INSERT INTO Gamers
 (username, First_login, Hours_played, Last_seen_online, Main_hero)

@@ -14,24 +14,35 @@ heroes = [
 hero_picked = False
 
 while True:
+    #quit bruges til hvis man ikke vil tilføje accounts så kan man komme ud af loopet
     quit = input("\nDo you want to make a new account? (y/n)")
     if quit.lower() == "n" or quit.lower() == "no":
         break
     elif quit.lower() == "y" or quit.lower() == "yes":
         username = input("\nEnter your username: ")
+
+        #loop der bruges til at validere om brugeren picker en valid hero
         while hero_picked == False:
             hero = input(f"Heres a list of heroes pick 1\n{heroes}\nwhat hero do you wanna play ")
             hero = hero.lower()
             hero = hero.capitalize()
+
+            #hvis en valid hero er valgt
             if hero in heroes:
                 print(f"you have chosen {hero}")
                 hero_picked = True
+
+            #hvis en ikke valid hero er valgt
             else:
                 print(f"that's not a hero plss try again")
-        while hero_picked == True:
+
+        #nu når en hero er valgt så indsættes dataen fra brugeren ind i databasen
+        if hero_picked == True:
             cur.execute("""INSERT INTO Gamers (username, First_login, Hours_played, Last_seen_online, Main_hero) VALUES (?,?,?,?,?)""",(username,date,0,date,hero))
             print(f"you have now succesfully crated your account {username}")
             conn.commit()
             hero_picked = False
+
+    #kun inputvalidering
     else:
         print("plss press either y or n")

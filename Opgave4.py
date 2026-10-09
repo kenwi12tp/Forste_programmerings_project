@@ -5,6 +5,7 @@ import sqlite3 as sql
 conn = sql.connect("Gamers.db")
 cur = conn.cursor()
 
+#vælger alt data i datasættet gamers og printer det
 cur.execute("select * from Gamers")
 data = cur.fetchall()
 for row in data:

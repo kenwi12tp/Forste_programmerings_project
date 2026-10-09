@@ -3,6 +3,7 @@ import sqlite3 as sql
 conn = sql.connect("Gamers.db")
 cur = conn.cursor()
 
+#deleter alt i databasen og lukker forbindelsen
 cur.execute("DELETE FROM Gamers")
 conn.commit()
 conn.close()
