@@ -2,11 +2,11 @@
 #pænt i konsollen.
 
 import sqlite3 as sql
-conn = sql.connect("gamers.db")
+conn = sql.connect("Gamers.db")
 cur = conn.cursor()
 
 cur.execute("select * from Gamers")
 data = cur.fetchall()
-for i in data:
-    print(f"Player:{i[1]}, Joined the at:{i[2]}, Hours played:{i[3]}, Last seen:{i[4]}, Main hero:{i[5]}")
+for row in data:
+    print(f"Player:{row[1]}, Joined the at:{row[2]}, Hours played:{row[3]}, Last seen:{row[4]}, Main hero:{row[5]}")
 conn.close()
